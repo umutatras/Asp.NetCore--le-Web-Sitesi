@@ -1,0 +1,22 @@
+﻿@model EntityLayer.Concrete.Skill
+@{
+    ViewData["Title"] = "AdSkill";
+    Layout = "~/Views/Shared/AdminLayout2.cshtml";
+}
+
+
+ <div class="card-header border-0">
+              <h3 class="mb-0">Yetenek Ekleme</h3>
+            </div>            
+<form class="form-control" method="post">
+    <br /> <br /> 
+   @Html.Label("Yetenek Adı ")<br />  <br />
+    <input type="text" name="Title" class="form-control"/>
+    <br />
+   
+    @Html.Label("Yetenek Değeri ")<br />  <br />
+    <input type="text" name="Value" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+  
+</form>

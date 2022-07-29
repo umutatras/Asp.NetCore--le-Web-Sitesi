@@ -1,0 +1,49 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+    ViewData["Title"] = "UpdatePortfolio";
+    Layout = "~/Views/Shared/AdminLayout2.cshtml";
+}
+
+ <div class="card-header border-0">
+              <h3 class="mb-0">Proje Güncelleme</h3>
+ </div>
+  @using(Html.BeginForm("UpdatePortfolio","Portfolio",FormMethod.Post))
+ {
+     @Html.HiddenFor(x=>x.PortfolioID)
+     <br />
+    @Html.Label("Proje Başlığı")
+    @Html.TextBoxFor(x=>x.Name,new{@class="form-control"})
+    <br />
+    @Html.Label("Görsel1 ")
+    @Html.TextBoxFor(x=>x.ImageUrl,new{@class="form-control"})
+    <br />
+    @Html.Label("Görsel2")
+    @Html.TextBoxFor(x=>x.ImageUrl2,new{@class="form-control"})
+    <br />
+    @Html.Label("Proje Url")
+    @Html.TextBoxFor(x=>x.ProjectUrl,new{@class="form-control"})
+    <br />
+    @Html.Label("GorselAdmin1")
+    @Html.TextBoxFor(x=>x.Image1,new{@class="form-control"})
+    <br />
+    @Html.Label("GorselAdmin2")
+    @Html.TextBoxFor(x=>x.Image2,new{@class="form-control"})
+    <br />
+    @Html.Label("GorselAdmin3")
+    @Html.TextBoxFor(x=>x.Image3,new{@class="form-control"})
+    <br />
+    @Html.Label("GorselAdmin4")
+    @Html.TextBoxFor(x=>x.Image4,new{@class="form-control"})
+    <br />
+       @Html.Label("Platform")
+    @Html.TextBoxFor(x=>x.Platform,new{@class="form-control"})
+    <br />
+          @Html.Label("Oran")
+    @Html.TextBoxFor(x=>x.Value,new{@class="form-control"})
+    <br />
+              @Html.Label("Fiyat")
+    @Html.TextBoxFor(x=>x.Price,new{@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+
+ }

@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Experience
+@{
+    ViewData["Title"] = "EditExperience";
+    Layout = "~/Views/Shared/AdminLayout2.cshtml";
+}
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Deneyim Güncelleme</h3>
+</div>
+
+@using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.ExpereinceID)
+    <br />
+    <br />
+
+    @Html.Label("Yetenek Adı ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Yetenek Değeri ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Değeri ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Değeri ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("İmageUrl ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama ")
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+
+
+
+    <button class="btn btn-primary">Güncelle</button>
+
+ }
